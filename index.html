@@ -1,41 +1,73 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <style type="text/css">
+        .block1 {
+            width: 200px;
+            background: #20B2AA;
+            border: solid 1px black;
+            float: right;
+            position: relative;
+            top: 100px;
+            left: -350px;
+            font-size:80px;
+            padding: 50px 100px;
+        }
+        .block2 {
+            width: 200px;
+            background: #20B2AA;
+            padding: 5px;
+            border: solid 1px black;
+            float: right;
+            position: relative;
+            top: 350px;
+            left: -40px;
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+        }
+        .but1{
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+            width: 50px;
+            font-size:50px;
+            top: 350px;
+            left: -40px;
+            background-color: #20B2AA;
+        }
+        .input1{
+            top: 80px;
+            left: 500px;
+            position: absolute;
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+        }
+        .input2{
+            top: 90px;
+            left: 500px;
+            margin-top: 31px;
+            position: absolute;
 
-  <meta name="theme-color" content="#fafafa">
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Browser</title>
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
+<h1>
+                                                                Online calculator for slave.
+</h1>
+<input id = "input1" class = "input1" type="number">
+<input id = "input2" class = "input2" type="number">
+<button class = "but1" >/</button>
+<button class = "but1">*</button>
+<button class = "but1">+</button>
+<button class = "but1">-</button>
+<button class = "but1">√</button>
+<button class = "but1">**</button>
+<div class="block1"></div>
+<div class="block2">Using brain is good , but use it with calculator is better)</div>
+</body >
+  
