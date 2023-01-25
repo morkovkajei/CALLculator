@@ -5,16 +5,30 @@
     <meta charset="UTF-8" />
     <title>Calculator</title>
     <style type="text/css">
+        body{
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(to right, white, #FA1);
+        }
         .block1 {
             width: 200px;
-            background: #20B2AA;
             border: solid 1px black;
             float: right;
             position: relative;
             top: 100px;
             left: -350px;
             font-size:80px;
-            padding: 50px 100px;
+            height: 170px;
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, .75);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 10px;
+            word-wrap: break-word;
+            word-break: break-all;
+            border-radius: 25px;
         }
         .block2 {
             width: 200px;
@@ -26,14 +40,19 @@
             top: 350px;
             left: -40px;
 
+
         }
         .but1{
-
+            position:relative;
+            cursor: pointer;
+            font-size: 2rem;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(255, 255, 255, .75);
+            border-radius: 25px;
             width: 50px;
-            font-size:50px;
             top: 350px;
-            left: -40px;
-            background-color: #20B2AA;
+            left: 500px;
         }
         .input1{
             top: 80px;
@@ -70,4 +89,3 @@
 <div class="block1"></div>
 <div class="block2">Using brain is good , but use it with calculator is better)</div>
 </body >
-  
