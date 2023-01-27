@@ -1,95 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="Style.css">
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <style type="text/css">
-        body{
-            padding: 0;
-            margin: 0;
-            background: linear-gradient(to right, white, #FA1);
-        }
-        .block1 {
-            width: 300px;
-            border: solid 1px black;
-            float: right;
-            position: relative;
-            top: 150px;
-            left: -725px;
-            font-size:200px;
-            height: 170px;
-            grid-column: 1 / -1;
-            background-color: rgba(0, 0, 0, .75);
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-around;
-            flex-direction: column;
-            padding: 10px;
-            word-wrap: break-word;
-            word-break: break-all;
-            border-radius: 25px;
-        }
-        .block2 {
-            width: 200px;
-            background: #20B2AA;
-            padding: 5px;
-            border: solid 1px black;
-            float: right;
-            position: relative;
-            top: 350px;
-            left: -40px;
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body{
+        font-weight:normal;
+        font-family:Gotham Rounded, sans-serif;
+        background: linear-gradient(to right, rgb(0, 0, 0),rgb(0, 110, 255));
+      }
+      .calculator{
+        display:grid;
+        align-content:center;
+        justify-content:center;
+      }
+      .calculator{
+        /** previously written code **/
+        min-height: 100vh;
+      }
+      .calculator{
+        display:grid;
+        align-content:center;
+        justify-content:center;
+        min-height:100vh;
+        grid-template-rows:minmax(120px, auto) repeat(5,100px);
+        grid-template-columns:repeat(4,100px);
+      }
+      .calculator-grid > button {
+        outline: none;
+        background-color:rgba(255, 255, 255, .75);
+        font-size: 2rem;
+        border: 1px solid #fff;
+        cursor: pointer;
+      }
 
+      .calculator-grid > button:hover {
+        /** previously written code **/
+        background-color:rgba(255, 255, 255, .9)
+      }
 
-        }
-        .but1{
-            position:relative;
-            cursor: pointer;
-            font-size: 2rem;
-            border: 1px solid white;
-            outline: none;
-            background-color: rgba(255, 255, 255, .75);
-            border-radius: 25px;
-            width: 50px;
-            top: 350px;
-            left: 500px;
-        }
-        .input1{
-            top: 80px;
-            left: 500px;
-            position: absolute;
-            background-color: rgba(255, 255, 255, .75);
+      .span-two{
+        grid-column: span 2;
+      }
 
+      .output{
+        background-color: rgba(0, 0, 0, .75);
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 9px;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+      .output .previous-operand {
+        font-size : 1.5rem;
+        color: rgba(255, 255, 255, .75);
+      }
+      .output .current-operand{
+        font-size: 2.5rem;
+        color: #fff;
+      }
 
-        }
-        .input2{
-            top: 90px;
-            left: 500px;
-            margin-top: 31px;
-            position: absolute;
-            background-color: rgba(255, 255, 255, .75);
-        }
     </style>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Browser</title>
-</head>
-
-<body>
-<h1>
-                                                                Online calculator for slave.
-</h1>
-<input id = "input1" class = "input1" type="number">
-<input id = "input2" class = "input2" type="number">
-<button class = "but1" >/</button>
-<button class = "but1">*</button>
-<button class = "but1">+</button>
-<button class = "but1">-</button>
-<button class = "but1">√</button>
-<button class = "but1">**</button>
-<div class="block1"></div>
-<div class="block2">Using brain is good , but use it with calculator is better)</div>
-<script src="main.js"></script>
-</body >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+  <div class="calculator">
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+    </div>
+    <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">=</button>
+  </div>
+  </body>
+  </html>
